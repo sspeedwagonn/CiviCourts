@@ -1,0 +1,4 @@
+name: CiviCourts
+version: '1.0'
+main: net.civicraft.civiCourts.CiviCourts
+api-version: '1.21'
