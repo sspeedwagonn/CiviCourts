@@ -1,4 +1,19 @@
 package net.civicraft.civiCourts.command;
 
-public class CourtCommand {
+import co.aikar.commands.BaseCommand;
+import co.aikar.commands.annotation.CommandAlias;
+import co.aikar.commands.annotation.Default;
+import co.aikar.commands.annotation.HelpCommand;
+
+@CommandAlias("court")
+public class CourtCommand extends BaseCommand {
+    @Default
+    public void onCase() {
+
+    }
+
+    @HelpCommand
+    public void onHelp() {
+
+    }
 }
