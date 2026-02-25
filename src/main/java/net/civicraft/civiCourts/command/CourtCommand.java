@@ -5,9 +5,9 @@ import co.aikar.commands.annotation.CommandAlias;
 import co.aikar.commands.annotation.Default;
 import co.aikar.commands.annotation.HelpCommand;
 
-@CommandAlias("court")
 public class CourtCommand extends BaseCommand {
     @Default
+    @CommandAlias("court")
     public void onCase() {
 
     }
