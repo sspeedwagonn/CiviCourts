@@ -17,7 +17,6 @@ public class WarrantCreationGUI {
         StaticPane pane = new StaticPane(Slot.fromIndex(10), 7, 1, Pane.Priority.HIGHEST);
 
 
-
         OutlinePane outline = new OutlinePane(9, 3);
         outline.addItem(new GuiItem(ItemStack.of(Material.GRAY_STAINED_GLASS)));
 

@@ -20,4 +20,12 @@ public class Case {
     public Case(boolean isActive, Map<Player, RoleType> involved, String caseName) {
 
     }
+
+    public void addToInvolved(Player player, RoleType roleType) {
+        involved.put(player, roleType);
+    }
+
+    public boolean isInvolved(Player player) {
+        return involved.containsKey(player);
+    }
 }
