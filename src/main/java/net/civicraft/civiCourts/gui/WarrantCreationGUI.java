@@ -16,7 +16,6 @@ public class WarrantCreationGUI {
 
         StaticPane pane = new StaticPane(Slot.fromIndex(10), 7, 1, Pane.Priority.HIGHEST);
 
-
         OutlinePane outline = new OutlinePane(9, 3);
         outline.addItem(new GuiItem(ItemStack.of(Material.GRAY_STAINED_GLASS)));
 
@@ -26,6 +25,19 @@ public class WarrantCreationGUI {
     }
 
     private GuiItem typeSelector() {
+        ItemStack item = new ItemStack(Material.AIR);
+        /*
+        I want to make a GUIItem that when clicked, rotates the type instead of opening a new GUI item to select a type or including all types in one
+         */
 
+        return new GuiItem(item, e -> {
+           if (e.isLeftClick()) {
+               //confirm selection
+           } else if (e.isRightClick()){
+               //cycle right
+           } else {
+               //do nothing for shift clicks or anything else. might not even need this -- prolly dont
+           }
+        });
     }
 }

@@ -18,7 +18,7 @@ public class CaseStart extends BaseCommand {
     public void onCaseStart(Player player, Case c, boolean live) {
         /*
         start a case
-        requires everyone to be on
+        requires everyone to be on -- though async cases will eventually exist
         autosend an announcement to discord, tag relevant role
          */
     }
