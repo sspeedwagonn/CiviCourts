@@ -2,8 +2,11 @@ package net.civicraft.civiCourts.command.subcommand;
 
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.CommandAlias;
+import co.aikar.commands.annotation.Optional;
 import co.aikar.commands.annotation.Subcommand;
+import net.civicraft.civiCourts.gui.CourtListGUI;
 import net.civicraft.civiCourts.object.Court;
+import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
 /*
@@ -15,26 +18,28 @@ Calls a player to the stand to give a testimony. It teleports the player to the 
 @CommandAlias("court")
 public class CourtLocation extends BaseCommand {
     @Subcommand("location")
-    public void onLocation() {
+    public void onLocation(Player player, String court) {
         /*
-        subcommand menu
+        player searches for a court
+        and if the court exists
+        they get the location
+        and its a clickable component
+        that may tp them there or start a GPS
          */
     }
 
     @Subcommand("location list")
-    public void onLocationList() {
-        /*
-        for every existing court location
-        list the name and maybe other info
-        i could even make it a GUI
-        would it be worth making a GUI
-         */
+    public void onLocationList(Player player) {
+        CourtListGUI.openGUI(player);
     }
 
-    //TODO: manual location setting
     @Subcommand("location set")
-    public void onLocationSet(Player player, Court court) {
-        court.setLocation(player.getLocation());
+    public void onLocationSet(Player player, Court court, @Optional double x, @Optional double y, @Optional double z) {
+        if (z == 0) { //TODO: There's a better way to check if a player tried coords but missed one, add it l8r
+            court.setLocation(player.getLocation());
+        } else {
+            court.setLocation(new Location(player.getWorld(), x, y, z));
+        }
     }
 
     @Subcommand("location tp")
