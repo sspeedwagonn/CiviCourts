@@ -15,6 +15,7 @@ public final class CiviCourts extends JavaPlugin {
 
     public void registerCommands() {
         PaperCommandManager pcm = new PaperCommandManager(this);
+        pcm.enableUnstableAPI("help");
         pcm.registerCommand(new CaseCommand());
         pcm.registerCommand(new CourtCommand());
     }
