@@ -14,7 +14,7 @@ public class JuryManager {
         //potentially make this better. getting a list of online players and working through it may be too taxing for bigger servers. also, there's 100% a better way to select jury, potentially via a recursive call
 
         //getOnlinePlayers already returns a set. Do I need a list here? Or can I just make a single call to the player list every time for a random player? Can i have it already exclude involved players instead of checking every time?
-        for (int i = 0; i > n; i++) {
+        for (int i = 0; i < n; i++) {
             Player player = onlinePlayers.get(i);
 
             if (c.isInvolved(player)) {
