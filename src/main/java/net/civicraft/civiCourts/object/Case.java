@@ -18,7 +18,9 @@ public class Case {
     private Date caseClosed;
 
     public Case(boolean isActive, Map<Player, RoleType> involved, String caseName) {
-
+        this.isActive = isActive;
+        this.involved = involved;
+        this.caseName = caseName;
     }
 
     public void addToInvolved(Player player, RoleType roleType) {
