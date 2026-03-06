@@ -15,7 +15,7 @@ Begins the review of a case. If it's live, those involved in the case will have 
 @CommandAlias("case")
 public class CaseStart extends BaseCommand {
     @Subcommand("start")
-    public void onCaseStart(Player player, Case c, boolean live) {
+    public void onCaseStart(Player player, Case c, boolean async) {
         /*
         start a case
         requires everyone to be on -- though async cases will eventually exist

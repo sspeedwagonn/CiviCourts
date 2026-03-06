@@ -19,6 +19,6 @@ Lists evidence in a case with information about the evidence.
 public class EvidenceList extends BaseCommand {
     @Subcommand("list")
     public void onEvidenceList(Player player, Case c) {
-        ArrayList<Evidence> evidence = EvidenceManager.getEvidenceByCase(c);
+        ArrayList<Evidence> evidence = c.getCaseEvidence();
     }
 }

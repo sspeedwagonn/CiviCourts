@@ -21,6 +21,5 @@ public class WarrantCheck {
         } else if (WarrantManager.hasActiveWarrant(player)) {
             player.sendMessage(Component.text("You have a warrant <info>."));
         }
-
     }
 }

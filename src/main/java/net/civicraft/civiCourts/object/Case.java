@@ -4,6 +4,7 @@ import net.civicraft.civiCourts.object.type.CaseType;
 import net.civicraft.civiCourts.object.type.RoleType;
 import org.bukkit.entity.Player;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Map;
 
@@ -16,6 +17,7 @@ public class Case {
     private Date caseInit;
     private Date caseCalled;
     private Date caseClosed;
+    private ArrayList<Evidence> caseEvidence;
 
     public Case(boolean isActive, Map<Player, RoleType> involved, String caseName) {
         this.isActive = isActive;
@@ -25,6 +27,14 @@ public class Case {
 
     public void addToInvolved(Player player, RoleType roleType) {
         involved.put(player, roleType);
+    }
+    public void addToEvidence(Evidence evidence) {
+        // need more to this. validate here?
+        caseEvidence.add(evidence);
+    }
+
+    public ArrayList<Evidence> getCaseEvidence() {
+        return caseEvidence;
     }
 
     public boolean isInvolved(Player player) {
