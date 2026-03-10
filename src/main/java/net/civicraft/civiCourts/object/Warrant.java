@@ -14,7 +14,7 @@ public class Warrant {
         this.player = player;
         this.issuer = issuer;
         this.type = type;
-        this.reason = (reason.isBlank() | reason.isEmpty()) ? type.getReason() : reason;
+        this.reason = (reason.isBlank() | reason.isEmpty()) ? type.getDescription() : reason;
         this.warrantId = 1; //add unique id gen
     }
 }
